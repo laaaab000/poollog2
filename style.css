@@ -1,0 +1,493 @@
+
+/* =========================
+   基本設定
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        sans-serif;
+    color: #34463b;
+    background-color: #f8faf7;
+    line-height: 1.8;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   導覽列
+========================= */
+
+.header {
+    width: 100%;
+    height: 72px;
+    background-color: #ffffff;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid #edf1ec;
+}
+
+.nav-container {
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    padding: 0 24px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 26px;
+    font-weight: 800;
+    color: #648b76;
+    letter-spacing: 1px;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 36px;
+}
+
+.nav-menu a {
+    font-size: 14px;
+    color: #53665a;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #648b76;
+}
+
+
+/* =========================
+   首頁主視覺
+========================= */
+
+.hero {
+    max-width: 1100px;
+    min-height: 440px;
+    margin: auto;
+    padding: 80px 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    max-width: 650px;
+    z-index: 2;
+}
+
+.hero-label,
+.section-label {
+    color: #648b76;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.hero h1 {
+    font-size: 38px;
+    line-height: 1.5;
+    color: #344f3e;
+    margin-bottom: 20px;
+}
+
+.hero-description {
+    max-width: 580px;
+    color: #718076;
+    font-size: 15px;
+    margin-bottom: 30px;
+}
+
+.primary-button {
+    display: inline-block;
+    padding: 11px 28px;
+    background-color: #648b76;
+    color: #ffffff;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.primary-button:hover {
+    background-color: #456b57;
+    transform: translateY(-2px);
+}
+
+
+/* 主視覺裝飾 */
+
+.hero-decoration {
+    width: 300px;
+    height: 300px;
+    flex-shrink: 0;
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle {
+    position: absolute;
+    border-radius: 50%;
+}
+
+.circle-large {
+    width: 250px;
+    height: 250px;
+    background-color: #e7f0e8;
+}
+
+.circle-small {
+    width: 180px;
+    height: 180px;
+    background-color: #d5e5d7;
+}
+
+.hero-icon {
+    position: relative;
+    font-size: 85px;
+}
+
+
+/* =========================
+   區塊共用設定
+========================= */
+
+.section {
+    padding: 75px 24px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading h2 {
+    font-size: 28px;
+    color: #344f3e;
+    margin-bottom: 10px;
+}
+
+.section-heading > p:last-child {
+    font-size: 14px;
+    color: #87948b;
+}
+
+
+/* =========================
+   關於系統
+========================= */
+
+.about {
+    background-color: #edf4ed;
+}
+
+.about-content {
+    max-width: 760px;
+    margin: auto;
+    text-align: center;
+    color: #64746a;
+    font-size: 15px;
+    line-height: 2.1;
+}
+
+
+/* =========================
+   系統功能
+========================= */
+
+.features {
+    max-width: 1150px;
+    margin: auto;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background-color: #ffffff;
+    padding: 28px 22px;
+    border-radius: 12px;
+    border: 1px solid #edf1ec;
+    position: relative;
+    transition: 0.3s;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(69, 107, 87, 0.08);
+}
+
+.feature-number {
+    color: #b4c9b8;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.feature-icon {
+    font-size: 32px;
+    margin: 18px 0 12px;
+}
+
+.feature-card h3 {
+    font-size: 17px;
+    color: #456b57;
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #87948b;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   使用規則
+========================= */
+
+.rules {
+    background-color: #edf4ed;
+}
+
+.rules-container {
+    max-width: 760px;
+    margin: auto;
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 15px 30px;
+}
+
+.rule-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 18px 0;
+    border-bottom: 1px solid #edf1ec;
+}
+
+.rule-item:last-child {
+    border-bottom: none;
+}
+
+.rule-number {
+    flex-shrink: 0;
+    color: #648b76;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.rule-item p {
+    font-size: 14px;
+    color: #64746a;
+}
+
+
+/* =========================
+   功能預告
+========================= */
+
+.notice {
+    padding: 65px 24px;
+    text-align: center;
+    background-color: #648b76;
+}
+
+.notice .section-label {
+    color: #dceadd;
+}
+
+.notice h2 {
+    font-size: 25px;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.notice-content > p:last-child {
+    color: #e5eee6;
+    font-size: 14px;
+}
+
+
+/* =========================
+   頁尾
+========================= */
+
+.footer {
+    padding: 35px 20px;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.footer-logo {
+    color: #648b76;
+    font-size: 24px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.footer p {
+    color: #87948b;
+    font-size: 13px;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    font-size: 11px;
+    color: #aab3ac;
+}
+
+
+/* =========================
+   手機版 RWD
+========================= */
+
+@media (max-width: 768px) {
+
+    .nav-container {
+        padding: 0 18px;
+    }
+
+    .nav-menu {
+        gap: 16px;
+    }
+
+    .nav-menu a {
+        font-size: 12px;
+    }
+
+    .hero {
+        padding: 60px 24px;
+        min-height: auto;
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .hero-description {
+        font-size: 14px;
+    }
+
+    .hero-decoration {
+        width: 220px;
+        height: 220px;
+    }
+
+    .circle-large {
+        width: 190px;
+        height: 190px;
+    }
+
+    .circle-small {
+        width: 140px;
+        height: 140px;
+    }
+
+    .hero-icon {
+        font-size: 65px;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .section {
+        padding: 60px 20px;
+    }
+
+    .section-heading h2 {
+        font-size: 25px;
+    }
+}
+
+
+/* =========================
+   小螢幕手機
+========================= */
+
+@media (max-width: 480px) {
+
+    .header {
+        height: 65px;
+    }
+
+    .logo {
+        font-size: 23px;
+    }
+
+    .nav-menu {
+        gap: 10px;
+    }
+
+    .nav-menu a {
+        font-size: 11px;
+    }
+
+    .hero h1 {
+        font-size: 24px;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-card {
+        padding: 24px;
+    }
+
+    .rules-container {
+        padding: 10px 18px;
+    }
+
+    .rule-item {
+        gap: 12px;
+    }
+
+    .rule-item p {
+        font-size: 13px;
+    }
+
+    .notice h2 {
+        font-size: 21px;
+    }
+}
