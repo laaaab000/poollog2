@@ -491,3 +491,42 @@ a {
         font-size: 21px;
     }
 }
+
+/* =========================
+   其他頁面共用標題
+========================= */
+
+.page-content {
+    max-width: 1100px;
+    min-height: 65vh;
+    margin: auto;
+    padding: 70px 24px;
+}
+
+.page-heading {
+    text-align: center;
+    padding: 35px 0;
+}
+
+.page-heading h1 {
+    font-size: 32px;
+    color: #344f3e;
+    margin-top: 8px;
+}
+
+/* 導覽列目前頁面 */
+.nav-menu a.active {
+    color: #648b76;
+    font-weight: 700;
+}
+
+/* 手機版頁面標題 */
+@media (max-width: 480px) {
+    .page-content {
+        padding: 50px 20px;
+    }
+
+    .page-heading h1 {
+        font-size: 26px;
+    }
+}
